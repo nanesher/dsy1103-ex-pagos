@@ -46,6 +46,7 @@ public class PagoService {
                 null,
                 new ParameterizedTypeReference<>() {}
         );
+        assert response.getBody() != null;
         ProductoDTO productoDTO = response.getBody().getContent();
         pago.setIdProducto(pagoInicio.getIdProducto());
         assert productoDTO != null;

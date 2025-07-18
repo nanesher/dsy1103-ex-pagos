@@ -23,7 +23,7 @@ public class Pago {
     @Column(name="pago_id")
     private Integer pagoId;
 
-    @Schema(description = "Fecha en la que fue procesado el pago")
+    @Schema(description = "Fecha en la que fue procesado el pago",example = "2025-07-18T14:30:00")
     @Column(name="fecha_pago", nullable=false)
     private LocalDateTime fechaPago;
 
