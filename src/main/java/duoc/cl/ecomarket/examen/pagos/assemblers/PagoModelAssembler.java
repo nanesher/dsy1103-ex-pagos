@@ -25,8 +25,8 @@ public class PagoModelAssembler implements RepresentationModelAssembler<Pago, En
         return EntityModel.of(pago,
                 linkTo(methodOn(PagoController.class).getById(pago.getPagoId())).withSelfRel(),
                 linkTo(methodOn(PagoController.class).getAll()).withRel("Lista de todos los pagos(con metodo get)"),
-                linkTo(methodOn(PagoController.class).delete(pago.getPagoId())).withRel("Borrar la pago (con metodo delete)"),
-                linkTo(methodOn(PagoController.class).updatePago(pago.getPagoId(),null)).withRel("Actualizar la pago(con metodo put y con body)"),
+                linkTo(methodOn(PagoController.class).delete(pago.getPagoId())).withRel("Borrar el pago (con metodo delete)"),
+                linkTo(methodOn(PagoController.class).updatePago(pago.getPagoId(),null)).withRel("Actualizar el pago(con metodo put y con body)"),
                 Link.of(productosApiUrl + pago.getIdProducto()).withRel("producto del pago"),
                 Link.of(usuariosApiUrl + pago.getIdUsuario()).withRel("Usuario del pago"));
     }

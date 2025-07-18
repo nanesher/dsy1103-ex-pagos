@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PagoRequest {
 
-
     private Integer idProducto;
     private Integer idUsuario;
     private String metodoPago;
